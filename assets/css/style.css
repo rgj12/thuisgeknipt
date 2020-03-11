@@ -1060,7 +1060,7 @@ blockquot {
 }
 /* Button Primary */
 .btn--primary {
-  background-color: #bb8c4b;
+  background-color: #f6760a;
   color: #ffffff;
   border: 1px solid transparent;
 }
@@ -1135,7 +1135,7 @@ blockquot {
 }
 /* Button Bordered */
 .btn--bordered {
-  background-color: transparent;
+  background-color: #f6760a;
 }
 .btn--bordered.btn--primary {
   color: #bb8c4b;
@@ -1160,7 +1160,7 @@ blockquot {
 }
 .btn--bordered.btn--white {
   color: #ffffff;
-  border-color: #ffffff;
+  border-color: #f6760a;
 }
 .btn--bordered.btn--white:active,
 .btn--bordered.btn--white:focus,
@@ -2419,7 +2419,7 @@ ul.dropdown-menu > li.has-dropdown > a:before {
 }
 /* Header Fixed */
 .header-fixed .affix {
-  background-color: #303030;
+  background-color: #f6760a;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
   -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.09);
@@ -3748,7 +3748,7 @@ ul.dropdown-menu > li.has-dropdown > a:before {
 /* Top Bar */
 .top-bar {
   height: 50px;
-  background-color: transparent;
+  background-color: #f6760a;
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -7517,7 +7517,7 @@ ul.comments-list ul.comment-children ul .comment-body .comment {
 }
 .carousel-navs .owl-controls .owl-nav .owl-prev:before {
   font-family: 'Linearicons-Free';
-  content: "\e875";
+  content: "\2190";
   font-size: 40px;
 }
 .carousel-navs .owl-controls .owl-nav .owl-next {
@@ -7525,7 +7525,7 @@ ul.comments-list ul.comment-children ul .comment-body .comment {
 }
 .carousel-navs .owl-controls .owl-nav .owl-next:before {
   font-family: 'Linearicons-Free';
-  content: "\e876";
+  content: "\27a6";
   font-size: 40px;
 }
 .carousel-navs .owl-dots {
@@ -7598,13 +7598,13 @@ ul.comments-list ul.comment-children ul .comment-body .comment {
   font-size: 40px;
 }
 .slider-navs .owl-controls .owl-nav .owl-prev:before {
-  content: "\e875";
+  content: "\2190";
 }
 .slider-navs .owl-controls .owl-nav .owl-next {
   right: 30px;
 }
 .slider-navs .owl-controls .owl-nav .owl-next:before {
-  content: "\e876";
+  content: "\2192";
 }
 .slider-navs .owl-dots {
   position: absolute;
