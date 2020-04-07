@@ -10,7 +10,7 @@
   <meta name="author" content="zytheme" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="description"
-    content="Hairy is a pixel perfect creative barber html5 tempalte  based on designed with great attention to details, flexibility and performance. It is ultra professional, smooth and sleek, with a clean modern layout." />
+    content="thuisgeknipt is je voordeligste optie om de beste knipbeurten te krijgen in rotterdam." />
   <link href="assets/images/logo/tgp-logo.jpg" rel="icon" />
 
   <!-- Fonts
@@ -348,9 +348,10 @@
               <!-- .module-search end -->
               <!-- Module Cart -->
               <div class="module module-cart pull-left">
-                <div class="module-icon">
-                  <a class="btn btn--white btn--bordered btn--rounded" href="#">Book Online</a>
-                </div>
+                <!-- <div class="module-icon"> -->
+                <a href="#" data-toggle="modal" data-target="#confirm-afspraak"
+                  class="btn btn--white btn--bordered btn--rounded mt-20">Maak een afspraak</a>
+                <!-- </div> -->
               </div>
               <!-- .module-cart end -->
             </div>
@@ -383,7 +384,8 @@
                   system.
                 </div>
                 <div class="slide-action">
-                  <a class="btn btn--primary btn--rounded" href="#">Read More
+                  <a class="btn btn--primary btn--rounded" href="#" data-toggle="modal"
+                    data-target="#confirm-afspraak">Read More
                   </a>
                 </div>
               </div>
@@ -556,9 +558,9 @@
         <!-- .row end -->
         <div class="row">
           <!-- Service #1 -->
-          <div class="col-xs-6 col-sm-4 col-md-2">
+          <a href="#" data-toggle="modal" data-target="#confirm-afspraak" class="col-xs-6 col-sm-4 col-md-2">
             <div class="time-panel">
-              <h3>sun</h3>
+              <h3>Zondag</h3>
               <ul class="list-unstyled mb-0">
                 <li>10.00 am</li>
                 <li>to</li>
@@ -566,7 +568,7 @@
               </ul>
             </div>
             <!-- .time-panel end -->
-          </div>
+          </a>
           <!-- .col-md-2 end -->
 
           <!-- Service #2 -->
@@ -1221,13 +1223,87 @@
       </div>
     </footer>
   </div>
+
+  <div class="modal fade" id="confirm-afspraak" tabindex="-1" role="dialog" aria-labelledby="confirm-afspraak"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Maak een afspraak</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="#" method="post" id="afspraak_form">
+            <div class="form-group">
+              <label for="naam">Naam :</label>
+              <input type="text" class="form-control" name="naam" id="naam" placeholder="naam">
+            </div>
+
+            <div class="form-group">
+              <label for="datum">Datum :</label>
+              <input type="date" class="form-control" name="datum" id="datum" placeholder="selecteer datum">
+            </div>
+
+            <div class="form-group">
+              <label for="tijd">Tijd :</label>
+              <select name="tijd" id="tijd" class="form-control">
+                <option value="" selected>Selecteer tijd</option>
+                <option value="10:30 t/m 11:00">10:30 t/m 11:00</option>
+                <option value="10:00 t/m 10:30">10:00 t/m 10:30</option>
+
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="email">Email :</label>
+              <input type="text" class="form-control" name="email" id="email" placeholder="email"
+                aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+              <label for="telefoonnummer">Telefoonnummer :</label>
+              <input type="text" class="form-control" name="telefoonnummer" id="telefoonnummer"
+                placeholder="telefoonnummer" maxlength="10" aria-describedby="telefoonnummerHelp"
+                onkeyup="return validatePhoneNumber(this.value);">
+            </div>
+            <div class="form-group">
+              <label for="aantal_personen">Aantal personen :</label>
+              <input type="number" class="form-control" name="aantal_personen" id="aantal_personen" min="1"
+                placeholder="aantal personen">
+            </div>
+            <div class="form-group">
+              <label for="service">Kies waar u voor komt :</label>
+              <select name="service" id="service" class="form-control">
+                <option value="" selected>Selecteer service</option>
+                <option value="knippen">knippen</option>
+                <option value="facemask">facemask</option>
+
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="opmerking">Opmerkingen :</label>
+              <textarea name="opmerking" class="form-control" id="opmerking" cols="20" rows="5"></textarea>
+            </div>
+        </div>
+        <div class=" modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Maak afspraak">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- #wrapper end -->
 
   <!-- Footer Scripts
 ============================================= -->
   <script src="assets/js/jquery-2.2.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
   <script src="assets/js/plugins.js"></script>
   <script src="assets/js/functions.js"></script>
+  <script src="assets/js/request.js"></script>
+  <script src="assets/js/validate.js"></script>
 </body>
 
 </html>
