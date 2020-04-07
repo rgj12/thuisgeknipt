@@ -7968,3 +7968,7 @@ ul.comments-list ul.comment-children ul .comment-body .comment {
   font-style: italic;
   color:red;
 }
+.notAvailable{
+  text-decoration: line-through;
+  color: red;
+}

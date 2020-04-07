@@ -1,20 +1,3 @@
-$(document).ready(function () {
-    //custom method zodat er alleen nummers ingevoerd worden in telefoonnummer veld
-    function validatePhoneNumber(number) {
-        //verwijder elke character die geen nummer is
-        number = number.replace(/[^0-9]/g, '');
-        $("#telefoonnummer").val(number);
-
-        //als de input niet 10 characters is maak input veld rood anders groen
-        if (!number.match(/^0[0-9]{9}$/)) {
-            $("#telefoonnummer").css({ 'background': '#FFEDEF', 'border': 'solid 1px red' });
-            return false;
-        } else {
-            $("#telefoonnummer").css({ 'background': '#99FF99', 'border': 'solid 1px green' });
-            return true;
-        }
-    }
-});
 $(function () {
     afspraakform = $("#afspraak_form");
     //custom method zodat er geen spaties ingevoerd worden
@@ -41,7 +24,7 @@ $(function () {
                 naam: {
                     required: true,
                     noSpace: true,
-                    minlength: 3
+
                 },
                 email: {
                     required: true,
@@ -70,6 +53,9 @@ $(function () {
                 },
                 opmerking: {
                     noSpace: true
+                },
+                soort_service: {
+                    required: true
                 }
             },
             //bepaal welke error messages bij welke errors horen
@@ -98,6 +84,9 @@ $(function () {
                 },
                 service: {
                     required: ' Selecteer waar u voor komt!'
+                },
+                soort_service: {
+                    required: 'Kies uw gewenste locatie'
                 }
             }
         });
