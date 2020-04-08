@@ -72,10 +72,13 @@
                             <div class="col-xs-12 col-sm-6 col-md-6 top--contact hidden-xs">
                                 <ul class="list-inline mb-0 ">
                                     <li>
-                                        <i class="fa fa-clock-o"></i><span>Mon - Fri 9.00 : 17.00</span>
+                                        <i class="fa fa-clock-o"></i><span> 24/7 (Alleen op
+                                            afspraak)</span>
                                     </li>
                                     <li>
-                                        <i class="fa fa-phone"></i> <span>(04) 491 570 110</span>
+                                        <a href="tel:0630947797" style="color:white;"><i class="fa fa-phone"></i>
+                                            <span>(06) 30947797
+                                            </span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -121,31 +124,30 @@
                             <ul class="nav navbar-nav nav-pos-right nav-bordered-right snavbar-left">
                                 <!-- Home Menu -->
                                 <li class="has-dropdown active">
-                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">home</a>
-                                    <ul class="dropdown-menu">
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Werktijden</a>
+                                    <!-- <ul class="dropdown-menu">
                                         <li><a href="index-2.html">homepage 1</a></li>
                                         <li><a href="homepage-2.html">homepage 2</a></li>
                                         <li><a href="homepage-3.html">homepage 3</a></li>
                                         <li><a href="landing.html">landing</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <!-- li end -->
                                 <!-- Pages Menu -->
                                 <li class="has-dropdown">
-                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover"
-                                        data-hover="pages">pages</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="page-about-us.html">about us</a></li>
+                                <li><a href="page-contact.html">contact us</a></li>
+                                <!-- <ul class="dropdown-menu"> -->
+                                <!-- <li><a href="page-about-us.html">about us</a></li>
                                         <li><a href="page-book-online.html">book online</a></li>
                                         <li><a href="page-our-staff.html">our staff</a></li>
-                                        <li><a href="page-services.html">our services</a></li>
-                                        <li><a href="page-contact.html">contact us</a></li>
-                                        <li><a href="page-404.html">404</a></li>
-                                    </ul>
+                                        <li><a href="page-services.html">our services</a></li> -->
+                                <!-- <li><a href="page-contact.html">contact us</a></li> -->
+                                <!-- <li><a href="page-404.html">404</a></li> -->
+                                <!-- </ul> -->
                                 </li>
                                 <!-- li end -->
                                 <!-- Features Menu-->
-                                <li class="has-dropdown">
+                                <!-- <li class="has-dropdown">
                                     <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">elements</a>
                                     <ul class="dropdown-menu">
                                         <li><a href="elements-buttons.html">buttons</a></li>
@@ -156,10 +158,10 @@
                                         <li><a href="elements-form.html">forms</a></li>
                                         <li><a href="elements-heading.html">heading</a></li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <!-- li end -->
                                 <!-- Gallery Menu-->
-                                <li class="has-dropdown">
+                                <!-- <li class="has-dropdown">
                                     <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Gallery</a>
                                     <ul class="dropdown-menu">
                                         <li>
@@ -178,10 +180,10 @@
                                             <a href="gallery-single-slider.html">single slider</a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <!-- li end -->
                                 <!-- Blog Menu-->
-                                <li class="has-dropdown">
+                                <!-- <li class="has-dropdown">
                                     <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Blog</a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu">
@@ -227,10 +229,10 @@
                                             <a href="blog-single.html">blog single</a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <!-- li end -->
                                 <!-- shop Menu -->
-                                <li class="has-dropdown">
+                                <!-- <li class="has-dropdown">
                                     <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">shop</a>
                                     <ul class="dropdown-menu">
                                         <li>
@@ -259,7 +261,7 @@
                                 <!-- li end -->
                             </ul>
                             <!-- Module Cart -->
-                            <div class="module module-cart pull-left">
+                            <!-- <div class="module module-cart pull-left">
                                 <div class="module-icon cart-icon">
                                     <i class="fa fa-shopping-bag"></i>
                                     <span class="title">shop cart</span>
@@ -323,14 +325,14 @@
                                             Cart & Checkout</a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- .module-cart end -->
                             <!-- Module Search -->
                             <div class="module module-search pull-left">
-                                <div class="module-icon search-icon">
+                                <!-- <div class="module-icon search-icon">
                                     <i class="fa fa-search"></i>
                                     <span class="title">search</span>
-                                </div>
+                                </div> -->
                                 <div class="module-content module-fullscreen module--search-box">
                                     <div class="pos-vertical-center">
                                         <div class="container">
@@ -394,7 +396,7 @@
                                 </div>
                                 <div class="slide-action">
                                     <a class="btn btn--primary btn--rounded" href="#" data-toggle="modal"
-                                        data-target="#confirm-afspraak">Read More
+                                        data-target="#confirm-afspraak">Maak afspraak
                                     </a>
                                 </div>
                             </div>
@@ -571,9 +573,9 @@
                         <div class="time-panel">
                             <h3>Zondag</h3>
                             <ul class="list-unstyled mb-0">
-                                <li>10.00 am</li>
-                                <li>to</li>
-                                <li>5.00 am</li>
+                                <li>10.00u</li>
+                                <li>tot</li>
+                                <li>17:00u</li>
                             </ul>
                         </div>
                         <!-- .time-panel end -->
@@ -581,73 +583,73 @@
                     <!-- .col-md-2 end -->
 
                     <!-- Service #2 -->
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <a href="#" class="col-xs-6 col-sm-4 col-md-2" data-toggle="modal" data-target="#confirm-afspraak">
                         <div class="time-panel">
-                            <h3>mon</h3>
+                            <h3>Maandag</h3>
                             <ul class="list-unstyled mb-0">
-                                <li>9.00 am</li>
-                                <li>to</li>
-                                <li>4.30 am</li>
+                                <li>10.00u</li>
+                                <li>tot</li>
+                                <li>17:00u</li>
                             </ul>
                         </div>
                         <!-- .time-panel end -->
-                    </div>
+                    </a>
                     <!-- .col-md-2 end -->
 
                     <!-- Service #3 -->
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <a href="#" data-toggle="modal" data-target="#confirm-afspraak" class="col-xs-6 col-sm-4 col-md-2">
                         <div class="time-panel">
                             <h3>tue</h3>
                             <ul class="list-unstyled mb-0">
-                                <li>10.00 am</li>
-                                <li>to</li>
-                                <li>5.30 am</li>
+                                <li>10.00u</li>
+                                <li>tot</li>
+                                <li>17:00u</li>
                             </ul>
                         </div>
                         <!-- .time-panel end -->
-                    </div>
+                    </a>
                     <!-- .col-md-2 end -->
 
                     <!-- Service #4 -->
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <a href="#" data-toggle="modal" data-target="#confirm-afspraak" class="col-xs-6 col-sm-4 col-md-2">
                         <div class="time-panel">
                             <h3>wed</h3>
                             <ul class="list-unstyled mb-0">
-                                <li>9.30 am</li>
-                                <li>to</li>
-                                <li>4.00 am</li>
+                                <li>10.00u</li>
+                                <li>tot</li>
+                                <li>17:00u</li>
                             </ul>
                         </div>
                         <!-- .time-panel end -->
-                    </div>
+                    </a>
                     <!-- .col-md-2 end -->
 
                     <!-- Service #5 -->
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <a href="#" data-toggle="modal" data-target="#confirm-afspraak" class="col-xs-6 col-sm-4 col-md-2">
                         <div class="time-panel">
                             <h3>thu</h3>
                             <ul class="list-unstyled mb-0">
-                                <li>10.00 am</li>
-                                <li>to</li>
-                                <li>5.00 am</li>
+                                <li>10.00u</li>
+                                <li>tot</li>
+                                <li>17:00u</li>
                             </ul>
                         </div>
                         <!-- .time-panel end -->
-                    </div>
+                    </a>
                     <!-- .col-md-2 end -->
 
                     <!-- Service #6 -->
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <a href="#" data-toggle="modal" data-target="#confirm-afspraak" class="col-xs-6 col-sm-4 col-md-2">
                         <div class="time-panel">
                             <h3>Fri</h3>
                             <ul class="list-unstyled mb-0">
-                                <li>9.00 am</li>
-                                <li>to</li>
-                                <li>4.30 am</li>
+                                <li>10.00u</li>
+                                <li>tot</li>
+                                <li>17:00u</li>
                             </ul>
                         </div>
                         <!-- .time-panel end -->
-                    </div>
+                    </a>
                     <!-- .col-md-2 end -->
                 </div>
                 <!-- .row end -->
@@ -1245,12 +1247,10 @@
                 </div>
                 <div class="modal-body">
                     <form action="#" method="post" id="afspraak_form">
-
-
                         <div class="form-group">
                             <label for="datum">Datum *</label>
                             <input type="date" class="form-control" name="datum" id="datum"
-                                placeholder="selecteer datum">
+                                placeholder="selecteer datum" required>
                         </div>
 
                         <div class="form-group">
@@ -1278,10 +1278,7 @@
                         <div class="form-group">
                             <label for="service">Kies waar u voor komt *</label>
                             <select name="service" id="service" class="form-control">
-                                <option value="" selected hidden>Selecteer service</option>
-                                <option value="knippen">knippen</option>
-                                <option value="facemask">facemask</option>
-
+                                <option value="" selected hidden>Selecteer soort service eerst</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -1309,7 +1306,8 @@
                 </div>
                 <div class=" modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Maak afspraak">
+                    <input type="submit" class="btn btn-primary" name="submit" id="submit_afspraak"
+                        value="Maak afspraak">
                     </form>
                 </div>
             </div>
@@ -1344,6 +1342,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/js/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/functions.js"></script>
     <script src="assets/js/request.js"></script>

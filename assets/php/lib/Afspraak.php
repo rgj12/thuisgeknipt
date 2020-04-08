@@ -26,4 +26,13 @@ class Afspraak
         $result = $this->db->resultSet();
         return $result;
     }
+
+    //krijg services binnen die aan de keuze van de bezoeker voldoet
+    public function getServices($soort_service)
+    {
+        $this->db->query("SELECT * FROM services WHERE soort = :soort_service");
+        $this->db->bind(':soort_service', $soort_service);
+        $result = $this->db->resultSet();
+        return $result;
+    }
 }

@@ -1,6 +1,6 @@
 <?php
+
 include 'config/init.php';
-// include 'helpers/system_helper.php';
 
 $afspraak = new Afspraak;
 
@@ -16,8 +16,21 @@ if (isset($_POST['datum'])) {
             <option class="notAvailable" disabled value="' . $tijd->tijden . '">' . $tijd->tijden . '</option>';
         } else {
             $output .= '<option  value="" selected hidden>Selecteer tijd</option>
-            <option value="' . $tijd->tijden . '">' . $tijd->tijden . '</option>';
+            <option class="available" value="' . $tijd->tijden . '">' . $tijd->tijden . '</option>';
         }
         echo $output;
     }
+}
+
+if (isset($_POST['soort_service'])) {
+    $soort_service = $_POST['soort_service'];
+    $services = $afspraak->getServices($soort_service);
+    $output = '';
+
+    foreach ($services as $service) {
+        $output .=   '<option  value="" selected hidden>Selecteer service</option>
+        <option value="' . $service->naam . '">' . $service->naam . '  €<sup>' . $service->prijs . '</sup>,- p.p</option>';
+    }
+
+    echo $output;
 }

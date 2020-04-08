@@ -7972,3 +7972,7 @@ ul.comments-list ul.comment-children ul .comment-body .comment {
   text-decoration: line-through;
   color: red;
 }
+
+.available{
+  color: green;
+}
