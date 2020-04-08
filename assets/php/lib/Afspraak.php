@@ -35,4 +35,26 @@ class Afspraak
         $result = $this->db->resultSet();
         return $result;
     }
+
+    public function bevestigAfspraak($data)
+    {
+        $this->db->query("INSERT INTO bevestigde_afspraken (naam,datum,tijd,email,telefoonnummer,aantal_personen,service,opmerkingen,locatie) VALUES (:naam,:datum,
+        :tijd,:email,:tel,:aantal,:service,:opmerk,:loc)");
+
+        $this->db->bind(":naam", $data['naam']);
+        $this->db->bind(":datum", $data['datum']);
+        $this->db->bind(":tijd", $data['tijd']);
+        $this->db->bind(":email", $data['email']);
+        $this->db->bind(":tel", $data['tel']);
+        $this->db->bind(":aantal", $data['aantal']);
+        $this->db->bind(":service", $data['service']);
+        $this->db->bind(":opmerk", $data['opmerk']);
+        $this->db->bind(":loc", $data['loc']);
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

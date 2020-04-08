@@ -1255,7 +1255,7 @@
 
                         <div class="form-group">
                             <label for="tijd">Tijd *</label>
-                            <select name="tijd" id="tijd" class="form-control">
+                            <select name="tijd" id="tijd" class="form-control" required>
                                 <option value="" selected>Selecteer een datum eerst
                                 </option>
                             </select>
@@ -1268,34 +1268,34 @@
                         </div>
                         <div class="form-group">
                             <label for="soort_service">Kies uw gewenste locatie*</label>
-                            <select name="soort_service" id="soort_service" class="form-control">
+                            <select name="soort_service" id="soort_service" class="form-control" required>
                                 <option value="" selected hidden>Selecteer locatie</option>
-                                <option value="op_locatie">Op locatie zuidplein</option>
+                                <option value="op locatie zuidplein">Op locatie zuidplein</option>
                                 <option value="huis-aan-huis">Huis aan huis service Rotterdam</option>
 
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="service">Kies waar u voor komt *</label>
-                            <select name="service" id="service" class="form-control">
+                            <select name="service" id="service" class="form-control" required>
                                 <option value="" selected hidden>Selecteer soort service eerst</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="naam">Naam *</label>
-                            <input type="text" class="form-control" name="naam" id="naam" placeholder="naam">
+                            <input type="text" class="form-control" name="naam" id="naam" placeholder="naam" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email *</label>
                             <input type="text" class="form-control" name="email" id="email" placeholder="email"
-                                aria-describedby="emailHelp">
+                                aria-describedby="emailHelp" required>
                         </div>
                         <div class="form-group">
                             <label for="telefoonnummer">Telefoonnummer *</label>
                             <input type="text" class="form-control" name="telefoonnummer" id="telefoonnummer"
                                 placeholder="telefoonnummer" maxlength="10" aria-describedby="telefoonnummerHelp"
-                                onkeyup="return validatePhoneNumber(this.value);">
+                                onkeyup="return validatePhoneNumber(this.value);" required>
                         </div>
 
                         <div class="form-group">

@@ -32,16 +32,18 @@ if (isset($_POST['action']) && $_POST['action'] == 'afspraakInfo') {
         $mail->isHTML(true);
         $mail->Subject = 'Een klant heeft een afspraak gemaakt';
         $mail->Body = '<h2>Hallo Joel,</h2><br>
-    <p>De volgende klant heeft een afspraak gemaakt en wacht op bevestiging:</p><br>
-    <p>Naam : <b>' . $naam . '</b></p><br>
-   <p>datum : <b>' . date_format(new datetime($datum), 'd-m-Y') . '</b></p><br>
-   <p>Tijd : <b>' . $tijd . '</b></p><br>
-   <p>aantal personen : <b>' . $aantal_personen . '</b></p><br>
-   <p>Service : <b>' . $service . '</b></p><br>
-   <p>Soort service : <b>' . $soort_service . '</b></p><br>
-    <p>Email : <b>' . $email . '</b></p><br>
-    <p>Telefoon : <b>' . $telefoon . '</b></p><br>
-    <a href="#">Klik hier om de afspraak te bevestigen</a>
+    <p>De volgende klant heeft een afspraak gemaakt en wacht op bevestiging:</p>
+    <p>Naam : <b>' . $naam . '</b></p>
+   <p>datum : <b>' . date_format(new datetime($datum), 'd-m-Y') . '</b></p>
+   <p>Tijd : <b>' . $tijd . '</b></p>
+   <p>aantal personen : <b>' . $aantal_personen . '</b></p>
+   <p>Service : <b>' . $service . '</b></p>
+   <p>Soort service : <b>' . $soort_service . '</b></p>
+    <p>Email : <b>' . $email . '</b></p>
+    <p>Telefoon : <b>' . $telefoon . '</b></p>
+    <p>Opmerking : <b>' . $opmerking . '</b></p>
+    <a href="localhost/thuisgeknipt/assets/php/afspraak_bevestiging.php?afspraak_datum=' . $datum . '&afspraak_tijd=' . $tijd . '&afspraak_email=' . $email . '
+    &afspraak_service=' . $service . '&naam=' . $naam . '&opmerking=' . $opmerking . '&aantal=' . $aantal_personen . '&tel=' . $telefoon . '&loc=' . $soort_service . '">Klik hier om de afspraak te bevestigen</a>
     ';
         $message = '';
         if (!$mail->send()) {
