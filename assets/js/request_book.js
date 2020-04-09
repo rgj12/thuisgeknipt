@@ -1,17 +1,9 @@
 $(document).ready(function () {
-    //stuur geselecteerde datum naar request.php om te kijken of tijdstip al ingenomen is
-    $("#datum").change(function () {
-        datum = $(this).val();
 
-        $.ajax({
-            url: "assets/php/request.php",
-            method: "POST",
-            data: { datum: datum },
-            success: function (response) {
-                $("#tijd").html(response);
-            }
-        });
 
+    $(".af-knop").click(function () {
+        timeslot = $(this).attr('data-timeslot');
+        $("#tijd").val(timeslot);
     });
 
     //stuur geselecteerde soort service om de juiste services daarvan te krijgen
@@ -19,7 +11,7 @@ $(document).ready(function () {
         soort_service = $(this).val();
 
         $.ajax({
-            url: "assets/php/request.php",
+            url: "request.php",
             method: "POST",
             data: { soort_service: soort_service },
             success: function (response) {
@@ -29,16 +21,28 @@ $(document).ready(function () {
         });
 
     });
-
+    $(".no").click(function (e) {
+        e.preventDefault();
+        Swal.fire({
+            title: 'Dit uur is al iemand ingepland',
+            text: 'Probeer een ander uur',
+            icon: 'error',
+            confirmButtonText: 'OK'
+        });
+    });
     // //stuur afspraak form data naar php
     $("#submit_afspraak").click(function (e) {
         if ($("#afspraak_form")[0].checkValidity()) {
             e.preventDefault();
+            console.log($("#afspraak_form").serialize());
+
             $.ajax({
-                url: "assets/php/mail.php",
+                url: "mail.php",
                 method: 'POST',
                 data: $("#afspraak_form").serialize() + "&action=afspraakInfo",
                 success: function (response) {
+                    console.log(response);
+
                     if (response == 'success') {
                         Swal.fire({
                             title: 'Gelukt!',
@@ -46,13 +50,13 @@ $(document).ready(function () {
                             icon: 'success',
                             confirmButtonText: 'OK'
                         });
-                        $("#confirm-afspraak").modal("hide");
                         $("#afspraak_form")[0].reset();
+                        $("#myModal").modal("hide");
                     } else {
                         Swal.fire({
                             title: 'Er is iets misgegaan!',
                             text: 'Probeer het opnieuw',
-                            icon: 'success',
+                            icon: 'error',
                             confirmButtonText: 'OK'
                         });
                     }
