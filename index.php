@@ -25,6 +25,9 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
@@ -926,134 +929,12 @@
 
         <!-- Blog Grid
 ============================================= -->
-        <section id="blog" class="blog blog-grid pb-100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-                        <div class="heading text--center mb-70">
-                            <h2 class="heading--title">Our Blog Posts</h2>
-                            <p class="heading--desc">
-                                Duis aute irure dolor in reprehenderit volupte velit esse
-                                cillum dolore eu fugiat pariatursint occaecat cupidatat non
-                                proident culpa.
-                            </p>
-                            <div class="divider--line"></div>
-                        </div>
-                    </div>
-                    <!-- .col-md-6 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-                    <!-- Blog Entry #1 -->
-                    <div class="col-xs-12 col-sm-12 col-md-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="assets/images/blog/grid/1.jpg" alt="entry image" />
-                                </a>
-                                <div class="entry--overlay">
-                                    <a href="#"><i class="fa fa-chain"></i></a>
-                                </div>
-                            </div>
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <span>Oct 20, 2017</span>
-                                    <span><a href="#">barbers</a></span>
-                                </div>
-                                <div class="entry--title">
-                                    <h4>
-                                        <a href="#">Foil shaver versus clippers & trimmers</a>
-                                    </h4>
-                                </div>
-                                <div class="entry--bio">
-                                    Are you a dedicated razor shaver? dude who hasn't really
-                                    thought about trying a different..
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#">read more <i class="fa fa-angle-double-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .blog-entry end -->
-                    </div>
-                    <!-- .col-md-4 end -->
+        <section id="mapid" class="blog blog-grid pb-100">
 
-                    <!-- Blog Entry #2 -->
-                    <div class="col-xs-12 col-sm-12 col-md-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="assets/images/blog/grid/2.jpg" alt="entry image" />
-                                </a>
-                                <div class="entry--overlay">
-                                    <a href="#"><i class="fa fa-chain"></i></a>
-                                </div>
-                            </div>
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <span>Oct 15, 2017</span>
-                                    <span><a href="#">Styles</a></span>
-                                </div>
-                                <div class="entry--title">
-                                    <h4>
-                                        <a href="#">Men’s hairstyles for all face shapes</a>
-                                    </h4>
-                                </div>
-                                <div class="entry--bio">
-                                    Most of the time, men don't know the haircuts that suit
-                                    their face shape - but don't worry, we're here to..
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#">read more <i class="fa fa-angle-double-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .blog-entry end -->
-                    </div>
-                    <!-- .col-md-4 end -->
+            <div>
 
-                    <!-- Blog Entry #3 -->
-                    <div class="col-xs-12 col-sm-12 col-md-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="assets/images/blog/grid/3.jpg" alt="entry image" />
-                                </a>
-                                <div class="entry--overlay">
-                                    <a href="#"><i class="fa fa-chain"></i></a>
-                                </div>
-                            </div>
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <span>Oct 25, 2017</span>
-                                    <span><a href="#">Haircut</a></span>
-                                </div>
-                                <div class="entry--title">
-                                    <h4><a href="#">Basic tips for styling men’s hair</a></h4>
-                                </div>
-                                <div class="entry--bio">
-                                    The first tip is to choose a hairstyle that’s realistic for
-                                    your lifestyle, hair type, and general image..
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#">read more <i class="fa fa-angle-double-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .blog-entry end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 clearfix mt-20 text--center">
-                        <a href="#" class="btn btn--secondary btn--bordered btn--rounded">View More</a>
-                    </div>
-                    <!-- .col-md-12 end -->
-                </div>
-                <!-- .row end -->
             </div>
-            <!-- .container end -->
+
         </section>
         <!-- #blog end -->
 
@@ -1246,7 +1127,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="post" id="afspraak_form">
+                    <form action="#" method="post" id="afspraak_form" autocomplete="off">
                         <div class="form-group">
                             <label for="datum">Datum *</label>
                             <input type="date" class="form-control" name="datum" id="datum"
@@ -1343,7 +1224,11 @@
     <script src="assets/js/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
     <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/map.js"></script>
     <script src="assets/js/functions.js"></script>
     <script src="assets/js/request.js"></script>
     <script src="assets/js/validate.js"></script>
