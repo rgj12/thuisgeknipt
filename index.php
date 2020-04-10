@@ -948,27 +948,32 @@
                             data-nav="false" data-dots="false" data-space="30" data-loop="true" data-speed="1000">
                             <!-- Client #1 -->
                             <div class="client">
-                                <img class="center-block" src="assets/images/clients/1.png" alt="client" />
+                                <img class="center-block" src="assets/images/logo/Thuisgekniptmatte.png"
+                                    style="height: 70px;" alt="client" />
                             </div>
 
                             <!-- Client #2 -->
                             <div class="client">
-                                <img class="center-block" src="assets/images/clients/2.png" alt="client" />
+                                <img class="center-block" src="assets/images/clients/morgans.jpg" style="height: 70px;"
+                                    alt="client" />
                             </div>
 
                             <!-- Client #3 -->
                             <div class="client">
-                                <img class="center-block" src="assets/images/clients/3.png" alt="client" />
+                                <img class="center-block" src="assets/images/clients/coming-soon.png" alt="client"
+                                    style="height: 70px;" />
                             </div>
 
                             <!-- Client #4 -->
                             <div class="client">
-                                <img class="center-block" src="assets/images/clients/4.png" alt="client" />
+                                <img class="center-block" src="assets/images/clients/coming-soon.png" alt="client"
+                                    style="height: 70px;" />
                             </div>
 
                             <!-- Client #5 -->
                             <div class="client">
-                                <img class="center-block" src="assets/images/clients/5.png" alt="client" />
+                                <img class="center-block" src="assets/images/clients/coming-soon.png"
+                                    style="height: 70px;" alt="client" />
                             </div>
                         </div>
                     </div>
