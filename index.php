@@ -900,28 +900,24 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                     <div class="row">
                         <div class="col-xs-12 col-sm-6 col-md-4 footer--widget-about">
                             <div class="footer--widget-content">
-                                <img class="mb-20" src="assets/images/logo/logo-light.png" alt="logo" />
+                                <img class="mb-20" src="assets/images/logo/TGP_wit.png" height="60px" alt="logo" />
                                 <p>
-                                    Proin gravida nibh vel velit auctor aliquet anean lorem
-                                    quis. bindum auctor, nisi elite conset ipsums sagtis id duis
-                                    sed odio sit.
+                                    Wij zijn 24/7 bereikbaar!
                                 </p>
                                 <div class="work--schedule clearfix">
                                     <ul class="list-unstyled">
-                                        <li>Monday - Friday <span>9.00 : 17.00</span></li>
-                                        <li>Saturday <span>9.00 : 15.00</span></li>
-                                        <li>Sunday <span>9.00 : 13.00</span></li>
+                                        <li>Maandag - Zondag<span> 24/7</span></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <!-- .col-md-4 end -->
                         <div class="col-xs-12 col-sm-6 col-md-4 footer--widget-recent">
-                            <div class="footer--widget-title">
+                            <!-- <div class="footer--widget-title">
                                 <h5>Latest Posts</h5>
-                            </div>
+                            </div> -->
                             <div class="footer--widget-content">
-                                <div class="entry">
+                                <!-- <div class="entry">
                                     <div class="entry--img">
                                         <a href="#">
                                             <img src="assets/images/blog/thumb/5.jpg" alt="entry" />
@@ -936,10 +932,10 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                                             <span>Nov 09, 2017</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- .entry end -->
 
-                                <div class="entry">
+                                <!-- <div class="entry">
                                     <div class="entry--img">
                                         <a href="#">
                                             <img src="assets/images/blog/thumb/4.jpg" alt="entry" />
@@ -953,10 +949,10 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                                             <span>Oct 30, 2017</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- .entry end -->
 
-                                <div class="entry">
+                                <!-- <div class="entry">
                                     <div class="entry--img">
                                         <a href="#">
                                             <img src="assets/images/blog/thumb/3.jpg" alt="entry" />
@@ -971,7 +967,7 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                                             <span>Oct 19, 2017</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- .entry end -->
                             </div>
                         </div>
@@ -983,18 +979,13 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                             <div class="footer--widget-content">
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <i class="fa fa-map-marker"></i> 1220 Petersham town,
-                                        Wardll St New South Wales Australia PA 6550.
+                                        <i class="fa fa-map-marker"></i>Rotterdam-zuid
                                     </li>
-                                    <li><i class="fa fa-phone"></i> (04) 491 570 110</li>
+                                    <li><i class="fa fa-phone"></i> (06) 30947797</li>
                                     <li>
-                                        <i class="fa fa-envelope-o"></i> contact@zytheme.com
+                                        <i class="fa fa-envelope-o"></i> thuisgekniptrotterdam@gmail.com
                                     </li>
                                 </ul>
-                                <form class="form--newsletter">
-                                    <input type="email" name="email" class="form-control" placeholder="Email address" />
-                                    <button type="submit">Subscribe</button>
-                                </form>
                             </div>
                         </div>
                         <!-- .col-md-4 end -->
@@ -1009,14 +1000,12 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-6">
-                            <span>&copy; 2017, All rights reserved.</span>
+                            <span>&copy; 2020, All rights reserved.</span>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 text-right">
                             <div class="social">
-                                <a class="share-twitter" href="#"><i class="fa fa-twitter"></i></a>
-                                <a class="share-facebook" href="#"><i class="fa fa-facebook"></i></a>
-                                <a class="share-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
-                                <a class="share-pinterest" href="#"><i class="fa fa-instagram"></i></a>
+                                <a class="share-twitter" href="https://www.instagram.com/thuisgeknipt.nl/"><i
+                                        class="fa fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
