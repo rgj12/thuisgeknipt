@@ -91,7 +91,9 @@
 
 </html>
 <?php
-include 'config/init.php';
+include 'config/config.php';
+include 'lib/Database.php';
+include 'lib/Afspraak.php';
 
 
 $afspraak = new Afspraak;
