@@ -1,7 +1,6 @@
 <?php
-include 'config/config.php';
-include 'lib/Database.php';
-include 'lib/Afspraak.php';
+include 'config/init.php';
+
 
 $afspraak = new Afspraak;
 

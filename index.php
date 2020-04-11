@@ -1,5 +1,7 @@
 <?php
-include 'assets/php/config/init.php';
+include 'assets/php/config/config.php';
+include 'assets/php/lib/Database.php';
+include 'assets/php/lib/Prijzen.php';
 $prijzenEnDiensten = new Prijzen;
 
 $prijzen = $prijzenEnDiensten->getPrijzen();
