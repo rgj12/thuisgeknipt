@@ -1,3 +1,9 @@
+<?php
+include 'assets/php/config/init.php';
+$prijzenEnDiensten = new Prijzen;
+
+$prijzen = $prijzenEnDiensten->getPrijzen();
+?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 
@@ -25,6 +31,9 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
@@ -72,10 +81,13 @@
                             <div class="col-xs-12 col-sm-6 col-md-6 top--contact hidden-xs">
                                 <ul class="list-inline mb-0 ">
                                     <li>
-                                        <i class="fa fa-clock-o"></i><span>Mon - Fri 9.00 : 17.00</span>
+                                        <i class="fa fa-clock-o"></i><span> 24/7 (Alleen op
+                                            afspraak)</span>
                                     </li>
                                     <li>
-                                        <i class="fa fa-phone"></i> <span>(04) 491 570 110</span>
+                                        <a href="tel:0630947797" style="color:white;"><i class="fa fa-phone"></i>
+                                            <span>(06) 30947797
+                                            </span></a>
                                     </li>
                                 </ul>
                             </div>
@@ -121,31 +133,30 @@
                             <ul class="nav navbar-nav nav-pos-right nav-bordered-right snavbar-left">
                                 <!-- Home Menu -->
                                 <li class="has-dropdown active">
-                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">home</a>
-                                    <ul class="dropdown-menu">
+                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Werktijden</a>
+                                    <!-- <ul class="dropdown-menu">
                                         <li><a href="index-2.html">homepage 1</a></li>
                                         <li><a href="homepage-2.html">homepage 2</a></li>
                                         <li><a href="homepage-3.html">homepage 3</a></li>
                                         <li><a href="landing.html">landing</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <!-- li end -->
                                 <!-- Pages Menu -->
                                 <li class="has-dropdown">
-                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle link-hover"
-                                        data-hover="pages">pages</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="page-about-us.html">about us</a></li>
+                                <li><a href="page-contact.html">contact us</a></li>
+                                <!-- <ul class="dropdown-menu"> -->
+                                <!-- <li><a href="page-about-us.html">about us</a></li>
                                         <li><a href="page-book-online.html">book online</a></li>
                                         <li><a href="page-our-staff.html">our staff</a></li>
-                                        <li><a href="page-services.html">our services</a></li>
-                                        <li><a href="page-contact.html">contact us</a></li>
-                                        <li><a href="page-404.html">404</a></li>
-                                    </ul>
+                                        <li><a href="page-services.html">our services</a></li> -->
+                                <!-- <li><a href="page-contact.html">contact us</a></li> -->
+                                <!-- <li><a href="page-404.html">404</a></li> -->
+                                <!-- </ul> -->
                                 </li>
                                 <!-- li end -->
                                 <!-- Features Menu-->
-                                <li class="has-dropdown">
+                                <!-- <li class="has-dropdown">
                                     <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">elements</a>
                                     <ul class="dropdown-menu">
                                         <li><a href="elements-buttons.html">buttons</a></li>
@@ -156,10 +167,10 @@
                                         <li><a href="elements-form.html">forms</a></li>
                                         <li><a href="elements-heading.html">heading</a></li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <!-- li end -->
                                 <!-- Gallery Menu-->
-                                <li class="has-dropdown">
+                                <!-- <li class="has-dropdown">
                                     <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Gallery</a>
                                     <ul class="dropdown-menu">
                                         <li>
@@ -178,10 +189,10 @@
                                             <a href="gallery-single-slider.html">single slider</a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <!-- li end -->
                                 <!-- Blog Menu-->
-                                <li class="has-dropdown">
+                                <!-- <li class="has-dropdown">
                                     <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Blog</a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu">
@@ -227,10 +238,10 @@
                                             <a href="blog-single.html">blog single</a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li> -->
                                 <!-- li end -->
                                 <!-- shop Menu -->
-                                <li class="has-dropdown">
+                                <!-- <li class="has-dropdown">
                                     <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">shop</a>
                                     <ul class="dropdown-menu">
                                         <li>
@@ -259,7 +270,7 @@
                                 <!-- li end -->
                             </ul>
                             <!-- Module Cart -->
-                            <div class="module module-cart pull-left">
+                            <!-- <div class="module module-cart pull-left">
                                 <div class="module-icon cart-icon">
                                     <i class="fa fa-shopping-bag"></i>
                                     <span class="title">shop cart</span>
@@ -323,14 +334,14 @@
                                             Cart & Checkout</a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- .module-cart end -->
                             <!-- Module Search -->
                             <div class="module module-search pull-left">
-                                <div class="module-icon search-icon">
+                                <!-- <div class="module-icon search-icon">
                                     <i class="fa fa-search"></i>
                                     <span class="title">search</span>
-                                </div>
+                                </div> -->
                                 <div class="module-content module-fullscreen module--search-box">
                                     <div class="pos-vertical-center">
                                         <div class="container">
@@ -394,7 +405,7 @@
                                 </div>
                                 <div class="slide-action">
                                     <a class="btn btn--primary btn--rounded" href="#" data-toggle="modal"
-                                        data-target="#confirm-afspraak">Read More
+                                        data-target="#confirm-afspraak">Maak afspraak
                                     </a>
                                 </div>
                             </div>
@@ -553,11 +564,10 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
                         <div class="heading text--center mb-80">
-                            <h2 class="heading--title text-white">Working Hours</h2>
+                            <h2 class="heading--title text-white">Werk tijden</h2>
                             <p class="heading--desc text-white">
-                                Duis aute irure dolor in reprehenderit volupte velit esse
-                                cillum dolore eu fugiat pariatursint occaecat cupidatat non
-                                proident culpa.
+                                Alleen op afspraak!<br>
+                                U kunt op een van de dagen klikken om een afspraak te maken
                             </p>
                             <div class="divider--line"></div>
                         </div>
@@ -571,9 +581,9 @@
                         <div class="time-panel">
                             <h3>Zondag</h3>
                             <ul class="list-unstyled mb-0">
-                                <li>10.00 am</li>
-                                <li>to</li>
-                                <li>5.00 am</li>
+                                <li>10.00u</li>
+                                <li>tot</li>
+                                <li>17:00u</li>
                             </ul>
                         </div>
                         <!-- .time-panel end -->
@@ -581,73 +591,73 @@
                     <!-- .col-md-2 end -->
 
                     <!-- Service #2 -->
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <a href="#" class="col-xs-6 col-sm-4 col-md-2" data-toggle="modal" data-target="#confirm-afspraak">
                         <div class="time-panel">
-                            <h3>mon</h3>
+                            <h3>Maandag</h3>
                             <ul class="list-unstyled mb-0">
-                                <li>9.00 am</li>
-                                <li>to</li>
-                                <li>4.30 am</li>
+                                <li>10.00u</li>
+                                <li>tot</li>
+                                <li>17:00u</li>
                             </ul>
                         </div>
                         <!-- .time-panel end -->
-                    </div>
+                    </a>
                     <!-- .col-md-2 end -->
 
                     <!-- Service #3 -->
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <a href="#" data-toggle="modal" data-target="#confirm-afspraak" class="col-xs-6 col-sm-4 col-md-2">
                         <div class="time-panel">
                             <h3>tue</h3>
                             <ul class="list-unstyled mb-0">
-                                <li>10.00 am</li>
-                                <li>to</li>
-                                <li>5.30 am</li>
+                                <li>10.00u</li>
+                                <li>tot</li>
+                                <li>17:00u</li>
                             </ul>
                         </div>
                         <!-- .time-panel end -->
-                    </div>
+                    </a>
                     <!-- .col-md-2 end -->
 
                     <!-- Service #4 -->
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <a href="#" data-toggle="modal" data-target="#confirm-afspraak" class="col-xs-6 col-sm-4 col-md-2">
                         <div class="time-panel">
                             <h3>wed</h3>
                             <ul class="list-unstyled mb-0">
-                                <li>9.30 am</li>
-                                <li>to</li>
-                                <li>4.00 am</li>
+                                <li>10.00u</li>
+                                <li>tot</li>
+                                <li>17:00u</li>
                             </ul>
                         </div>
                         <!-- .time-panel end -->
-                    </div>
+                    </a>
                     <!-- .col-md-2 end -->
 
                     <!-- Service #5 -->
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <a href="#" data-toggle="modal" data-target="#confirm-afspraak" class="col-xs-6 col-sm-4 col-md-2">
                         <div class="time-panel">
                             <h3>thu</h3>
                             <ul class="list-unstyled mb-0">
-                                <li>10.00 am</li>
-                                <li>to</li>
-                                <li>5.00 am</li>
+                                <li>10.00u</li>
+                                <li>tot</li>
+                                <li>17:00u</li>
                             </ul>
                         </div>
                         <!-- .time-panel end -->
-                    </div>
+                    </a>
                     <!-- .col-md-2 end -->
 
                     <!-- Service #6 -->
-                    <div class="col-xs-6 col-sm-4 col-md-2">
+                    <a href="#" data-toggle="modal" data-target="#confirm-afspraak" class="col-xs-6 col-sm-4 col-md-2">
                         <div class="time-panel">
                             <h3>Fri</h3>
                             <ul class="list-unstyled mb-0">
-                                <li>9.00 am</li>
-                                <li>to</li>
-                                <li>4.30 am</li>
+                                <li>10.00u</li>
+                                <li>tot</li>
+                                <li>17:00u</li>
                             </ul>
                         </div>
                         <!-- .time-panel end -->
-                    </div>
+                    </a>
                     <!-- .col-md-2 end -->
                 </div>
                 <!-- .row end -->
@@ -663,11 +673,10 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
                         <div class="heading text--center mb-70">
-                            <h2 class="heading--title">Our Pricing</h2>
+                            <h2 class="heading--title">Prijzen en diensten</h2>
                             <p class="heading--desc">
-                                Duis aute irure dolor in reprehenderit volupte velit esse
-                                cillum dolore eu fugiat pariatursint occaecat cupidatat non
-                                proident culpa.
+                                Alleen op afspraak!<br>
+                                Let op: huis aan huis bezoeken kosten extra!
                             </p>
                             <div class="divider--line"></div>
                         </div>
@@ -677,124 +686,25 @@
                 <!-- .row end -->
                 <div class="row">
                     <!-- Pricing #1 -->
+                    <?php foreach ($prijzen as $prijs) : ?>
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <div class="pricing-panel">
                             <div class="pricing--content">
-                                <h4 class="pricing--heading">Haircut</h4>
+                                <h4 class="pricing--heading"><?= $prijs->naam; ?></h4>
                                 <div class="pricing--divider"></div>
-                                <span class="price">$20.00</span>
+                                <span class="price">€<?= $prijs->prijs; ?> ,-</span>
                             </div>
                             <p class="pricing--desc">
-                                Our stylist consults & delivers you a precision haircut.
+                                <?= $prijs->soort; ?>
                             </p>
                         </div>
                         <!-- .panel end -->
                     </div>
+                    <?php endforeach; ?>
                     <!-- .col-md-4 end -->
-                    <!-- Pricing #2 -->
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="pricing-panel">
-                            <div class="pricing--content">
-                                <h4 class="pricing--heading">Moustache Trim</h4>
-                                <div class="pricing--divider"></div>
-                                <span class="price">$10.00</span>
-                            </div>
-                            <p class="pricing--desc">
-                                Select & Change your hair color for new experience.
-                            </p>
-                        </div>
-                        <!-- .panel end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                    <!-- Pricing #3 -->
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="pricing-panel">
-                            <div class="pricing--content">
-                                <h4 class="pricing--heading">Beard Trim</h4>
-                                <div class="pricing--divider"></div>
-                                <span class="price">$15.00</span>
-                            </div>
-                            <p class="pricing--desc">
-                                Keep your beard clean and sharp with an awesome style.
-                            </p>
-                        </div>
-                        <!-- .panel end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                    <!-- Pricing #4 -->
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="pricing-panel">
-                            <div class="pricing--content">
-                                <h4 class="pricing--heading">Hair Wash</h4>
-                                <div class="pricing--divider"></div>
-                                <span class="price">$6.00</span>
-                            </div>
-                            <p class="pricing--desc">
-                                Relax and have a hot towel for cleaning your face.
-                            </p>
-                        </div>
-                        <!-- .panel end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                    <!-- Pricing #5 -->
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="pricing-panel">
-                            <div class="pricing--content">
-                                <h4 class="pricing--heading">Hair Color</h4>
-                                <div class="pricing--divider"></div>
-                                <span class="price">$18.00</span>
-                            </div>
-                            <p class="pricing--desc">
-                                Select & Change your hair color for new experience.
-                            </p>
-                        </div>
-                        <!-- .panel end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                    <!-- Pricing #6 -->
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="pricing-panel">
-                            <div class="pricing--content">
-                                <h4 class="pricing--heading">Face Mask</h4>
-                                <div class="pricing--divider"></div>
-                                <span class="price">$12.00</span>
-                            </div>
-                            <p class="pricing--desc">
-                                Our stylist consults & delivers you a precision haircut.
-                            </p>
-                        </div>
-                        <!-- .panel end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                    <!-- Pricing #7 -->
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="pricing-panel">
-                            <div class="pricing--content">
-                                <h4 class="pricing--heading">Men’s Facial</h4>
-                                <div class="pricing--divider"></div>
-                                <span class="price">$25.00</span>
-                            </div>
-                            <p class="pricing--desc">
-                                Relax and have a hot towel for cleaning your face.
-                            </p>
-                        </div>
-                        <!-- .panel end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                    <!-- Pricing #8 -->
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="pricing-panel">
-                            <div class="pricing--content">
-                                <h4 class="pricing--heading">Line Up</h4>
-                                <div class="pricing--divider"></div>
-                                <span class="price">$13.00</span>
-                            </div>
-                            <p class="pricing--desc">
-                                Keep your beard clean and sharp with an awesome style.
-                            </p>
-                        </div>
-                        <!-- .panel end -->
-                    </div>
+
+
+
                 </div>
                 <!-- .row end -->
             </div>
@@ -924,134 +834,12 @@
 
         <!-- Blog Grid
 ============================================= -->
-        <section id="blog" class="blog blog-grid pb-100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
-                        <div class="heading text--center mb-70">
-                            <h2 class="heading--title">Our Blog Posts</h2>
-                            <p class="heading--desc">
-                                Duis aute irure dolor in reprehenderit volupte velit esse
-                                cillum dolore eu fugiat pariatursint occaecat cupidatat non
-                                proident culpa.
-                            </p>
-                            <div class="divider--line"></div>
-                        </div>
-                    </div>
-                    <!-- .col-md-6 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-                    <!-- Blog Entry #1 -->
-                    <div class="col-xs-12 col-sm-12 col-md-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="assets/images/blog/grid/1.jpg" alt="entry image" />
-                                </a>
-                                <div class="entry--overlay">
-                                    <a href="#"><i class="fa fa-chain"></i></a>
-                                </div>
-                            </div>
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <span>Oct 20, 2017</span>
-                                    <span><a href="#">barbers</a></span>
-                                </div>
-                                <div class="entry--title">
-                                    <h4>
-                                        <a href="#">Foil shaver versus clippers & trimmers</a>
-                                    </h4>
-                                </div>
-                                <div class="entry--bio">
-                                    Are you a dedicated razor shaver? dude who hasn't really
-                                    thought about trying a different..
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#">read more <i class="fa fa-angle-double-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .blog-entry end -->
-                    </div>
-                    <!-- .col-md-4 end -->
+        <section id="mapid" class="blog blog-grid pb-100">
 
-                    <!-- Blog Entry #2 -->
-                    <div class="col-xs-12 col-sm-12 col-md-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="assets/images/blog/grid/2.jpg" alt="entry image" />
-                                </a>
-                                <div class="entry--overlay">
-                                    <a href="#"><i class="fa fa-chain"></i></a>
-                                </div>
-                            </div>
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <span>Oct 15, 2017</span>
-                                    <span><a href="#">Styles</a></span>
-                                </div>
-                                <div class="entry--title">
-                                    <h4>
-                                        <a href="#">Men’s hairstyles for all face shapes</a>
-                                    </h4>
-                                </div>
-                                <div class="entry--bio">
-                                    Most of the time, men don't know the haircuts that suit
-                                    their face shape - but don't worry, we're here to..
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#">read more <i class="fa fa-angle-double-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .blog-entry end -->
-                    </div>
-                    <!-- .col-md-4 end -->
+            <div>
 
-                    <!-- Blog Entry #3 -->
-                    <div class="col-xs-12 col-sm-12 col-md-4">
-                        <div class="blog-entry">
-                            <div class="entry--img">
-                                <a href="#">
-                                    <img src="assets/images/blog/grid/3.jpg" alt="entry image" />
-                                </a>
-                                <div class="entry--overlay">
-                                    <a href="#"><i class="fa fa-chain"></i></a>
-                                </div>
-                            </div>
-                            <div class="entry--content">
-                                <div class="entry--meta">
-                                    <span>Oct 25, 2017</span>
-                                    <span><a href="#">Haircut</a></span>
-                                </div>
-                                <div class="entry--title">
-                                    <h4><a href="#">Basic tips for styling men’s hair</a></h4>
-                                </div>
-                                <div class="entry--bio">
-                                    The first tip is to choose a hairstyle that’s realistic for
-                                    your lifestyle, hair type, and general image..
-                                </div>
-                                <div class="entry--more">
-                                    <a href="#">read more <i class="fa fa-angle-double-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .blog-entry end -->
-                    </div>
-                    <!-- .col-md-4 end -->
-                </div>
-                <!-- .row end -->
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 clearfix mt-20 text--center">
-                        <a href="#" class="btn btn--secondary btn--bordered btn--rounded">View More</a>
-                    </div>
-                    <!-- .col-md-12 end -->
-                </div>
-                <!-- .row end -->
             </div>
-            <!-- .container end -->
+
         </section>
         <!-- #blog end -->
 
@@ -1065,27 +853,32 @@
                             data-nav="false" data-dots="false" data-space="30" data-loop="true" data-speed="1000">
                             <!-- Client #1 -->
                             <div class="client">
-                                <img class="center-block" src="assets/images/clients/1.png" alt="client" />
+                                <img class="center-block" src="assets/images/logo/Thuisgekniptmatte.png"
+                                    style="height: 70px;" alt="client" />
                             </div>
 
                             <!-- Client #2 -->
                             <div class="client">
-                                <img class="center-block" src="assets/images/clients/2.png" alt="client" />
+                                <img class="center-block" src="assets/images/clients/morgans.jpg" style="height: 70px;"
+                                    alt="client" />
                             </div>
 
                             <!-- Client #3 -->
                             <div class="client">
-                                <img class="center-block" src="assets/images/clients/3.png" alt="client" />
+                                <img class="center-block" src="assets/images/clients/coming-soon.png" alt="client"
+                                    style="height: 70px;" />
                             </div>
 
                             <!-- Client #4 -->
                             <div class="client">
-                                <img class="center-block" src="assets/images/clients/4.png" alt="client" />
+                                <img class="center-block" src="assets/images/clients/coming-soon.png" alt="client"
+                                    style="height: 70px;" />
                             </div>
 
                             <!-- Client #5 -->
                             <div class="client">
-                                <img class="center-block" src="assets/images/clients/5.png" alt="client" />
+                                <img class="center-block" src="assets/images/clients/coming-soon.png"
+                                    style="height: 70px;" alt="client" />
                             </div>
                         </div>
                     </div>
@@ -1244,18 +1037,16 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="post" id="afspraak_form">
-
-
+                    <form action="#" method="post" id="afspraak_form" autocomplete="off">
                         <div class="form-group">
                             <label for="datum">Datum *</label>
                             <input type="date" class="form-control" name="datum" id="datum"
-                                placeholder="selecteer datum">
+                                placeholder="selecteer datum" required>
                         </div>
 
                         <div class="form-group">
                             <label for="tijd">Tijd *</label>
-                            <select name="tijd" id="tijd" class="form-control">
+                            <select name="tijd" id="tijd" class="form-control" required>
                                 <option value="" selected>Selecteer een datum eerst
                                 </option>
                             </select>
@@ -1268,37 +1059,34 @@
                         </div>
                         <div class="form-group">
                             <label for="soort_service">Kies uw gewenste locatie*</label>
-                            <select name="soort_service" id="soort_service" class="form-control">
+                            <select name="soort_service" id="soort_service" class="form-control" required>
                                 <option value="" selected hidden>Selecteer locatie</option>
-                                <option value="op_locatie">Op locatie zuidplein</option>
+                                <option value="op locatie zuidplein">Op locatie zuidplein</option>
                                 <option value="huis-aan-huis">Huis aan huis service Rotterdam</option>
 
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="service">Kies waar u voor komt *</label>
-                            <select name="service" id="service" class="form-control">
-                                <option value="" selected hidden>Selecteer service</option>
-                                <option value="knippen">knippen</option>
-                                <option value="facemask">facemask</option>
-
+                            <select name="service" id="service" class="form-control" required>
+                                <option value="" selected hidden>Selecteer soort service eerst</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="naam">Naam *</label>
-                            <input type="text" class="form-control" name="naam" id="naam" placeholder="naam">
+                            <input type="text" class="form-control" name="naam" id="naam" placeholder="naam" required>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email *</label>
                             <input type="text" class="form-control" name="email" id="email" placeholder="email"
-                                aria-describedby="emailHelp">
+                                aria-describedby="emailHelp" required>
                         </div>
                         <div class="form-group">
                             <label for="telefoonnummer">Telefoonnummer *</label>
                             <input type="text" class="form-control" name="telefoonnummer" id="telefoonnummer"
                                 placeholder="telefoonnummer" maxlength="10" aria-describedby="telefoonnummerHelp"
-                                onkeyup="return validatePhoneNumber(this.value);">
+                                onkeyup="return validatePhoneNumber(this.value);" required>
                         </div>
 
                         <div class="form-group">
@@ -1309,7 +1097,8 @@
                 </div>
                 <div class=" modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Maak afspraak">
+                    <input type="submit" class="btn btn-primary" name="submit" id="submit_afspraak"
+                        value="Maak afspraak">
                     </form>
                 </div>
             </div>
@@ -1344,7 +1133,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/js/jquery-2.2.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
     <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/map.js"></script>
     <script src="assets/js/functions.js"></script>
     <script src="assets/js/request.js"></script>
     <script src="assets/js/validate.js"></script>
