@@ -7981,3 +7981,6 @@ ul.comments-list ul.comment-children ul .comment-body .comment {
   height: 371px; 
 
 }
+html {
+  scroll-behavior: smooth;
+}

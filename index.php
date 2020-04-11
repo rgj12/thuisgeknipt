@@ -133,7 +133,7 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                             <ul class="nav navbar-nav nav-pos-right nav-bordered-right snavbar-left">
                                 <!-- Home Menu -->
                                 <li class="has-dropdown active">
-                                    <a href="#" data-toggle="dropdown" class="dropdown-toggle menu-item">Werktijden</a>
+                                    <a href="#working-time" class="dropdown-toggle menu-item">Werktijden</a>
                                     <!-- <ul class="dropdown-menu">
                                         <li><a href="index-2.html">homepage 1</a></li>
                                         <li><a href="homepage-2.html">homepage 2</a></li>
@@ -579,7 +579,7 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                     <!-- Service #1 -->
                     <a href="#" data-toggle="modal" data-target="#confirm-afspraak" class="col-xs-6 col-sm-4 col-md-2">
                         <div class="time-panel">
-                            <h3>Zondag</h3>
+                            <h3>Weekend</h3>
                             <ul class="list-unstyled mb-0">
                                 <li>10.00u</li>
                                 <li>tot</li>
@@ -607,7 +607,7 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                     <!-- Service #3 -->
                     <a href="#" data-toggle="modal" data-target="#confirm-afspraak" class="col-xs-6 col-sm-4 col-md-2">
                         <div class="time-panel">
-                            <h3>tue</h3>
+                            <h3>Dinsdag</h3>
                             <ul class="list-unstyled mb-0">
                                 <li>10.00u</li>
                                 <li>tot</li>
@@ -621,7 +621,7 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                     <!-- Service #4 -->
                     <a href="#" data-toggle="modal" data-target="#confirm-afspraak" class="col-xs-6 col-sm-4 col-md-2">
                         <div class="time-panel">
-                            <h3>wed</h3>
+                            <h3>Woensdag</h3>
                             <ul class="list-unstyled mb-0">
                                 <li>10.00u</li>
                                 <li>tot</li>
@@ -635,7 +635,7 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                     <!-- Service #5 -->
                     <a href="#" data-toggle="modal" data-target="#confirm-afspraak" class="col-xs-6 col-sm-4 col-md-2">
                         <div class="time-panel">
-                            <h3>thu</h3>
+                            <h3>Donderdag</h3>
                             <ul class="list-unstyled mb-0">
                                 <li>10.00u</li>
                                 <li>tot</li>
@@ -649,7 +649,7 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                     <!-- Service #6 -->
                     <a href="#" data-toggle="modal" data-target="#confirm-afspraak" class="col-xs-6 col-sm-4 col-md-2">
                         <div class="time-panel">
-                            <h3>Fri</h3>
+                            <h3>Vrijdag</h3>
                             <ul class="list-unstyled mb-0">
                                 <li>10.00u</li>
                                 <li>tot</li>
@@ -658,6 +658,7 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                         </div>
                         <!-- .time-panel end -->
                     </a>
+
                     <!-- .col-md-2 end -->
                 </div>
                 <!-- .row end -->
