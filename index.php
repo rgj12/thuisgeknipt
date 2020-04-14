@@ -146,7 +146,6 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                                 <!-- li end -->
                                 <!-- Pages Menu -->
                                 <li class="has-dropdown">
-                                <li><a href="page-contact.html">contact us</a></li>
                                 <!-- <ul class="dropdown-menu"> -->
                                 <!-- <li><a href="page-about-us.html">about us</a></li>
                                         <li><a href="page-book-online.html">book online</a></li>
@@ -391,7 +390,7 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
             <!-- Slide #1 -->
             <div class="slide--item bg-overlay bg-overlay-dark">
                 <div class="bg-section">
-                    <img src="assets/images/sliders/slide-bg/1.jpg" alt="background" />
+                <img src="assets/gifs/gif1.gif" class="Homepage-gif1" alt="background" />
                 </div>
                 <div class="pos-vertical-center">
                     <div class="container">
@@ -422,7 +421,7 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
             <!-- Slide #2 -->
             <div class="slide--item bg-overlay bg-overlay-dark">
                 <div class="bg-section">
-                    <img src="assets/images/sliders/slide-bg/2.jpg" alt="background" />
+                <img class="Sliderpic2" src="assets/images/homepage/picture2.jpg"  alt="background" />
                 </div>
                 <div class="pos-vertical-center">
                     <div class="container">
@@ -437,40 +436,9 @@ $prijzen = $prijzenEnDiensten->getPrijzen();
                                     system.
                                 </div>
                                 <div class="slide-action">
-                                    <a class="btn btn--secondary btn--white btn--rounded mr-10" href="#">Read More
+                                    <a class="btn btn--secondary btn--white btn--rounded mr-10" href="#pricing">Prijzen
                                     </a>
-                                    <a class="btn btn--white btn--bordered btn--rounded" href="#">Get Started</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .row end -->
-                    </div>
-                    <!-- .container end -->
-                </div>
-            </div>
-            <!-- .slide-item end -->
-
-            <!-- Slide #3 -->
-            <div class="slide--item bg-overlay bg-overlay-dark">
-                <div class="bg-section">
-                    <img src="assets/images/sliders/slide-bg/3.jpg" alt="background" />
-                </div>
-                <div class="pos-vertical-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 text--center">
-                                <div class="slide--headline">our clients trust us</div>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 text--center">
-                                <div class="slide--bio">
-                                    Preparing your money is a daunting challenge for today's
-                                    investors and will give you a complete account of the
-                                    system.
-                                </div>
-                                <div class="slide-action">
-                                    <a class="btn btn--secondary btn--white btn--rounded mr-10" href="#">Read More
-                                    </a>
-                                    <a class="btn btn--white btn--bordered btn--rounded" href="#">Get Started</a>
+                                    <a class="btn btn--white btn--bordered btn--rounded" href="#testimonial2">Reviews</a>
                                 </div>
                             </div>
                         </div>
