@@ -29,8 +29,12 @@ if (isset($_POST['soort_service'])) {
 
     foreach ($services as $service) {
         $output .=   '<option  value="" selected hidden>Selecteer service</option>
-        <option value="' . $service->naam . '">' . $service->naam . '  €<sup>' . $service->prijs . '</sup>,- p.p</option>';
+        <option value="' . $service->naam . '" data-id="'.$service->id.'">' . $service->naam . '</option>';
     }
 
     echo $output;
+}
+
+if (isset($_POST['service_id'])) {
+    echo $afspraak->getServicePrijs($_POST['service_id']);
 }

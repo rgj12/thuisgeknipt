@@ -30,6 +30,21 @@ $(document).ready(function () {
 
     });
 
+    //stuur geselecteerde soort service om de juiste services daarvan te krijgen
+    $("#service").change(function () {
+        soort_service = $(this).children(":selected").attr("data-id");;
+        $.ajax({
+            url: "assets/php/request.php",
+            method: "POST",
+            data: {service_id: soort_service},
+            success: function (response) {
+                $("#price0").val(response);
+
+            }
+        });
+
+    });
+
     // //stuur afspraak form data naar php
     $("#submit_afspraak").click(function (e) {
         if ($("#afspraak_form")[0].checkValidity()) {

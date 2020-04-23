@@ -24,6 +24,7 @@
             $email = $_GET['afspraak_email'];
             $tel = $_GET['tel'];
             $loc = $_GET['loc'];
+            $prijs= $_GET['prijs'];
 
         ?>
         <div class="Back">
@@ -36,6 +37,11 @@
             <div class="form-group">
                 <label>Naam:</label>
                 <input class="form-control" type="text" name="bevestig_naam" required value="<?= $naam; ?>" />
+                <span class="Error"></span>
+            </div>
+            <div class="form-group">
+                <label>Prijs:</label>
+                <input class="form-control" type="text" name="bevestig_prijs" required value="<?= $prijs; ?>" />
                 <span class="Error"></span>
             </div>
             <div class="form-group">
@@ -105,6 +111,8 @@ if (isset($_POST['bevestig_afspraak'])) {
     $data['opmerk'] = $_POST['opmerking'];
     $data['tel'] = $_POST['bevestig_tel'];
     $data['loc'] = $_POST['loc'];
+    $data['prijs'] = $_POST['bevestig_prijs'];
+
 
     if ($afspraak->bevestigAfspraak($data)) {
         //maak nieuwe instance aan van PHPmailer class
@@ -118,17 +126,18 @@ if (isset($_POST['bevestig_afspraak'])) {
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'tls';
         //login credentials
-        $mail->Username = 'thuisgekniptrotterdam@gmail.com';
-        $mail->Password = 'c332599i';
+        $mail->Username = 'tgeknipt@gmail.com';
+        $mail->Password = 'Welkom2021!';
         //waar de mail naartoe gaat en van wie het komt
-        $mail->setFrom('thuisgekniptrotterdam@gmail.com', 'thuisgeknipt');
+        $mail->setFrom('tgeknipt@gmail.com', 'thuisgeknipt');
         $mail->addAddress($data['email']);
-        $mail->addReplyTo('thuisgekniptrotterdam@gmail.com');
+        $mail->addReplyTo('tgeknipt@gmail.com');
         //inhoud van mail
         $mail->isHTML(true);
         $mail->Subject = 'Afspraak bevestiging';
         $mail->Body = '<p>Hallo ' . $data['naam'] . '</p><br>
     <p>Bij deze is uw afspraak bevestigt op:</p>
+    <p>Prijs : '.$data['prijs'].' </p>
     <p><b>' . date_format(new datetime($data['datum']), 'd-m-Y') . '</b> van <b>' . $data['tijd'] . '</b>.</p>
     <p>Locatie: ' . $data['loc'] . ' </p>
     <p>Met vriendelijke groet,</p>
